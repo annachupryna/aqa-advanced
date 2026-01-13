@@ -33,7 +33,6 @@ console.log(square);
 
 let cylinderRadius = 5;
 let cylinderHeight = 7;
-let cylinderVolume = Math.PI * Math.sqrt(cylinderRadius) * cylinderHeight;
-//let cylinderVolume = Math.PI * Math.pow(cylinderRadius, 2) * cylinderHeight;
+let cylinderVolume = Math.PI * Math.pow(cylinderRadius, 2) * cylinderHeight;
 
 console.log(cylinderVolume.toFixed(2));

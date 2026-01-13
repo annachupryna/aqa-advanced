@@ -9,5 +9,5 @@ let firstName = 'Sam';
 let secondName = 'Andy';
 let hello = 'Hello'
 
-let greeting = hello + ' ' + firstName + ' and ' + secondName;
+let greeting = `${hello} ${firstName} and ${secondName}`;
 console.log(greeting);
