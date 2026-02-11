@@ -8,22 +8,22 @@
 Кожна з них має виводити просте повідомлення в консоль. Наприклад handleEven буде виводити текст “number is even”, 
 a handleOdd буде виводити текст “number is odd”
 Викличте функцію handleNum і передайте в якості аргументів довільне число і дві функції які ви створили раніше
-`
-function handleNum (num, evenCallback, oddCallback) {
-    if (num % 2 === 0 ) {
-        evenCallback();
-    } else {
-        oddCallback()
-    }
+`;
+function handleNum(num, evenCallback, oddCallback) {
+  if (num % 2 === 0) {
+    evenCallback();
+  } else {
+    oddCallback();
+  }
 }
 
 function evenCallback() {
-    console.log("number is even");
+  console.log("number is even");
 }
 
 function oddCallback() {
-    console.log("Number is odd")
+  console.log("Number is odd");
 }
 
-handleNum (4, evenCallback, oddCallback); 
-handleNum (7, evenCallback, oddCallback);  
+handleNum(4, evenCallback, oddCallback);
+handleNum(7, evenCallback, oddCallback);

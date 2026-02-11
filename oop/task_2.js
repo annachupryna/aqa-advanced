@@ -11,37 +11,37 @@
 
 Створіть статичний метод для EBook який буде приймати як аргументи екземпляр класу 
 Book і формат файлу як рядок ****та повертати екземпляр класу EBook
-`
-import { Book } from './task_1.js';
+`;
+import { Book } from "./task_1.js";
 
+export class EBook extends Book {
+  constructor(title, author, year, fileFormat) {
+    super(title, author, year);
+    this.fileFormat = fileFormat;
+  }
 
-class EBook extends Book {
-    constructor(title, author, year, fileFormat) {
-        super(title, author, year);
-        this.fileFormat = fileFormat;
+  get fileFormat() {
+    return this._fileFormat;
+  }
+
+  set fileFormat(value) {
+    const allowed = ["pdf", "epub"];
+    if (!allowed.includes(value)) {
+      throw new Error("Invalid file format");
     }
+    this._fileFormat = value;
+  }
 
-    get fileFormat() {
-        return this._fileFormat;
-    }
+  printInfo() {
+    console.log(
+      `Book title: ${this.title}, book author: ${this.author}, book year: ${this.year}, file format ${this.fileFormat}`,
+    );
+  }
 
-    set fileFormat(value) {
-        const allowed = ['pdf', 'epub'];
-        if (!allowed.includes(value)) {
-            throw new Error('Invalid file format');
-        }
-        this._fileFormat = value;
-    }
-
-    printInfo() {
-        console.log(`Book title: ${this.title}, book author: ${this.author}, book year: ${this.year}, file format ${this.fileFormat}`);
-    }
-
-    static makeEbook(book, format) {
-        let newEbook = new EBook(book.title, book.author, book.year, format);
-        return newEbook;
-    }
-
+  static makeEbook(book, format) {
+    let newEbook = new EBook(book.title, book.author, book.year, format);
+    return newEbook;
+  }
 }
 
 // ===== Example of usage creation of class instances =====

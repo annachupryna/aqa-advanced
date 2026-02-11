@@ -9,26 +9,20 @@
 Якщо середня оцінка від 60 до 70 (включно), вивести "Задовільно".
 Якщо середня оцінка від 71 до 80 (включно), вивести "Добре".
 Якщо середня оцінка від 81 до 90 (включно), вивести "Дуже добре".
-Якщо середня оцінка від 91 до 100 (включно), вивести "Відмінно".`
+Якщо середня оцінка від 91 до 100 (включно), вивести "Відмінно".`;
 
 const averageGrade = 81;
 
 if (0 <= averageGrade && averageGrade < 60) {
-    console.log('Незадовільно')
-}
-else if (60 <= averageGrade && averageGrade <= 70) {
-    console.log('Задовільно')
-}
-else if (70 < averageGrade && averageGrade <= 80) {
-    console.log('Добре')
-}
-else if (80 < averageGrade && averageGrade <= 90) {
-    console.log('Дуже добре')
-}
-else if (90 < averageGrade && averageGrade <= 100)
-{
-    console.log('Відмінно')
-}
-else {
-    console.log('Average grade can not be less than 0 and more than 100')
+  console.log("Незадовільно");
+} else if (60 <= averageGrade && averageGrade <= 70) {
+  console.log("Задовільно");
+} else if (70 < averageGrade && averageGrade <= 80) {
+  console.log("Добре");
+} else if (80 < averageGrade && averageGrade <= 90) {
+  console.log("Дуже добре");
+} else if (90 < averageGrade && averageGrade <= 100) {
+  console.log("Відмінно");
+} else {
+  console.log("Average grade can not be less than 0 and more than 100");
 }

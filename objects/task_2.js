@@ -6,14 +6,13 @@ author: рядок, представляє автора книги.
 year: рядок, представляє ім'я власника автомобіля
 Деструктуризуйте назву та автора книги з об'єкта book.
 Виведіть деструктуризовані змінні в консоль
-`
-
+`;
 
 const book = {
-    title: 'Kobzar',
-    author: 'Taras Shevchenko',
-    year: 1840
-}
+  title: "Kobzar",
+  author: "Taras Shevchenko",
+  year: 1840,
+};
 
 const { title, author } = book;
 

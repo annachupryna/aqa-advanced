@@ -10,22 +10,22 @@
 коли denominator дорівнює 0 або один з аргументів не є числом.
 Огорніть кожен окремий виклик функції divide в try…catch.Використовуючи блок finally, 
 виведіть повідомлення "Робота завершена" в консоль, навіть якщо помилка виникла або не виникла.
-`
+`;
 
-function divide (numerator, denominator) {
-    if  (typeof numerator !== "number" || typeof denominator !== "number") {
-        throw new Error ("Both arguments must be numbers");
-    }
-    if (denominator === 0 ) {
-        throw new Error ("Denominator cannot be zero");
-    }
-    return console.log(numerator / denominator);
+function divide(numerator, denominator) {
+  if (typeof numerator !== "number" || typeof denominator !== "number") {
+    throw new Error("Both arguments must be numbers");
+  }
+  if (denominator === 0) {
+    throw new Error("Denominator cannot be zero");
+  }
+  return console.log(numerator / denominator);
 }
 
 try {
-    divide ("2", 5);
+  divide("2", 5);
 } catch (error) {
-    console.error ('Сталася помилка:', error.message);
+  console.error("Сталася помилка:", error.message);
 } finally {
-    console.log("Робота завершена");
+  console.log("Робота завершена");
 }
