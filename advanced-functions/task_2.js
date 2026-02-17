@@ -5,11 +5,13 @@
 Після цього, рекурсивно викличте функцію зі зменшеним значенням num (наприклад, num - 1).
 Фунція повинна викликатися, доки num не стане менше або рівне 0.
 Викличте вашу функцію з аргументом, наприклад, 5, щоб почати рекурсивний лічильник.
-`
+`;
 
 function numDecrement(num) {
-    console.log(num);
-if (num > 0) {return numDecrement(num - 1)};
+  console.log(num);
+  if (num > 0) {
+    return numDecrement(num - 1);
+  }
 }
 
 numDecrement(5);

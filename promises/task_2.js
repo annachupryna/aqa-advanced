@@ -11,19 +11,24 @@ Copy code
 <https://jsonplaceholder.typicode.com/users/1>
 Функція повинна повертати як результат Promise що повертає об’єкт user
 Викорситайте методи Promise.all та Promise.race передавши їм як аргумент масив з викликами функцій з п.п. 1-2. Присвойте значення отримані від цих виразів до змінних
-`
+`;
 
 const fetchTodo = () =>
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-        .then(res => res.json());
+  fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) =>
+    res.json(),
+  );
 
 const fetchUser = () =>
-    fetch('https://jsonplaceholder.typicode.com/users/1')
-        .then(res => res.json());
+  fetch("https://jsonplaceholder.typicode.com/users/1").then((res) =>
+    res.json(),
+  );
 
 const allResult = Promise.all([fetchTodo(), fetchUser()])
-    .then(([todo, user]) => ({ todo, user }))
-    .catch(console.error);
+  .then(([todo, user]) => ({ todo, user }))
+  .catch(console.error);
 
-const raceResult = Promise.race([fetchTodo(), fetchUser()])
-    .catch(console.error);
+const raceResult = Promise.race([fetchTodo(), fetchUser()]).catch(
+  console.error,
+);
+
+console.log(allResult, raceResult);

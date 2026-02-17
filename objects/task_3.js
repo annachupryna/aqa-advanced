@@ -10,19 +10,19 @@ model: рядок, представляє модель автомобіля.
 owner: число, представляє рік випуску автомобіля.
 Створіть об'єкт car3. Використайте оператор spread, щоб додати всі властивості що є в car1 та car2 до об’єкту car3.
 Виведіть об'єкт car3 в консоль.
-`
+`;
 
 const car1 = {
-    brand: 'Toyota',
-    model: 'Camry',
-    year: 2020
-}
+  brand: "Toyota",
+  model: "Camry",
+  year: 2020,
+};
 
 const car2 = {
-    brand: 'Toyota',
-    model: 'Corolla',
-    owner: 'John Smith'
-}
+  brand: "Toyota",
+  model: "Corolla",
+  owner: "John Smith",
+};
 
 const car3 = { ...car1, ...car2 };
 console.log(car3);
