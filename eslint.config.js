@@ -12,4 +12,14 @@ export default defineConfig([
       globals: globals.node,
     },
   },
+  // for Jest-tests
+  {
+    files: ["**/*.test.js", "**/*.spec.js"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.jest,
+      },
+    },
+  },
 ]);
