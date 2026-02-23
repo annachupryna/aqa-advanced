@@ -1,7 +1,7 @@
 const { requestToWrongUrl } = require('./funcs');
 const { customHeadersAndUrlParams } = require('./funcs');
-const { fakeCustomHeadersAndUrlParams } = require('./funcs');
-const axios = require('axios');
+//const { fakeCustomHeadersAndUrlParams } = require('./funcs');
+//const axios = require('axios');
 
 test("Validate error", async () => {
     const res = await requestToWrongUrl();

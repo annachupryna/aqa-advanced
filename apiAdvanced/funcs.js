@@ -8,7 +8,7 @@
 const axios = require('axios');
 async function requestToWrongUrl() {
     try {
-        const response = await axios.get('https://httpbin.org/notValidUrl', { params: { random: 5 } });
+        await axios.get('https://httpbin.org/notValidUrl', { params: { random: 5 } });
     } catch (error) {
         console.error('Error fetching data:', error);
         return error.response.status; //Error fetching data: AxiosError: Request failed with status code 404
@@ -26,20 +26,17 @@ async function requestToWrongUrl() {
 що заголовки та параметри правильно включені в запит.
 `
 async function customHeadersAndUrlParams(headers, params) {
-    try {
-        const response = await axios.get(
-            "https://httpbin.org/get",
-            {
-                headers,
-                params
-            }
-        );
+    const response = await axios.get(
+        "https://httpbin.org/get",
+        {
+            headers,
+            params
+        }
+    );
+    return response.data;
 
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
 }
+
 
 
 async function fakeCustomHeadersAndUrlParams(headers, params) {
